@@ -4,8 +4,7 @@
     <header id="head" class="secondary"></header> 
     <div class="container">
               
-        <ol class="breadcrumb">
-            <li><a href="{$conf->action_root}start">Start</a></li>
+        <ol class="breadcrumb">            
             <li class="active">Logowanie</li>
         </ol>
 

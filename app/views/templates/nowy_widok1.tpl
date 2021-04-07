@@ -37,7 +37,7 @@
 						<!-- Nav -->
 							<nav id="nav">
 								<ul>
-									<li class="active"><a href="#">STRONA GŁÓWNA</a></li>
+									<li class="active"><a href="nowy">STRONA GŁÓWNA</a></li>
 									<li><a href="{$conf->action_root}loginShow">ZALOGUJ SIĘ</a></li>
                                                                       
 								</ul>

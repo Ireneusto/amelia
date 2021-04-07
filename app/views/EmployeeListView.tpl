@@ -19,6 +19,13 @@
                         <button type="submit" class="btn btn-action"><i class="fa fa-search"></i></button>
                     </form>
                 </div>
+                        
+                <div class="6u">				 
+                    <a href="{$conf->action_root}productList" class="button">Produkty</a>
+                    <a href="{$conf->action_root}customerList" class="button">Klienci</a>
+                    <a href="{$conf->action_root}employeeList" class="button">Pracownicy</a>
+                    <a href="{$conf->action_root}orderList" class="button">Zamówienia</a>
+                </div> 
                 
                 <div class="bottom-margin">
                     <a class="pure-button button-success" href="{$conf->action_root}employeeNew">+ nowy pracownik</a>
@@ -61,13 +68,12 @@
                         {strip}
                             <tr>
                                 <td>{$e["IDemployee"]}</td>
-                                <td>{$e["surname"]}</td>
-                                <td>{$e["name"]}</td>
-                                <td>{$e["phone_number"]}</td>
-                                <td>{$e["email"]}</td>
-                                <td>{$e["hire_date"]}</td>
                                 <td>{$e["login"]}</td>
                                 <td>{$e["password"]}</td>
+                                <td>{$e["name"]}</td>
+                                <td>{$e["surname"]}</td>
+                                <td>{$e["phone_number"]}</td>
+                                <td>{$e["hire_date"]}</td>
                                 <td style='display:flex'>
                                     <a class="button-small pure-button button-secondary" href="{$conf->action_url}employeeEdit/{$e['IDemployee']}">Edytuj</a>
                                     &nbsp;

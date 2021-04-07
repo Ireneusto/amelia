@@ -5,8 +5,7 @@
     <div class="container">
               
         <ol class="breadcrumb">
-            <li><a href="{$conf->action_root}start">Start</a></li>
-            <li class="active">Panel pracownika</li>
+            <li class="active">Panel administratora</li>
         </ol><br/>
         
         <div class="row">

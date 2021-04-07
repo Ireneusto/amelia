@@ -44,17 +44,9 @@ class OrderListCtrl {
                 "[>]employee" => "IDemployee",
                 "[>]product" => "IDproduct"
                 ],[
-                    "customer.IDcustomer",
-                    "customer.surname",
-                    "customer.name",
                     "employee.IDemployee",
-                    "employee.surname(surname_e)",
-                    "employee.name(name_e)",
+                    "customer.IDcustomer",
                     "product.IDproduct",
-                    "product.product_name",
-                    "order.IDorder",
-                    //"order.order_number",
-                    "order.order_date",
                     "order.order_completed",
                     ], $where);
         } catch (\PDOException $e) {

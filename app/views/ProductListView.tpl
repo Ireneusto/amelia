@@ -5,8 +5,7 @@
     <div class="container">
               
         <ol class="breadcrumb">
-            <li><a href="{$conf->action_root}start">Start</a></li>
-            <li class="active">Panel pracownika</li>
+            <li class="active">Panel administratora</li>
             <!--<span style="float:right;">użytkownik: {$this->login}, rola: {$this->role}</span>-->
         </ol>
         
@@ -26,13 +25,11 @@
                 
                 <div class="6u">				 
                     <a href="{$conf->action_root}productList" class="button">Produkty</a>
-                    <a href="{$conf->action_url}customerList" class="button">Klienci</a>
+                    <a href="{$conf->action_root}customerList" class="button">Klienci</a>
                     <a href="{$conf->action_root}employeeList" class="button">Pracownicy</a>
                     <a href="{$conf->action_root}orderList" class="button">Zamówienia</a>
                 </div> 
-                        
-                        
-                        
+                              
                 <div class="bottom-margin">
                     <a class="pure-button button-success" href="{$conf->action_root}productNew">+ nowy produkt</a>
                     <a class="pure-button button-error" href="{$conf->action_root}productList">lista</a>

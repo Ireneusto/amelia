@@ -5,7 +5,8 @@
     <div class="container">
               
         <ol class="breadcrumb">
-            <li class="active">Panel administratora</li>
+            <li><a href="{$conf->action_root}start">Start</a></li>
+            <li class="active">Panel pracownika</li>
         </ol><br/>
         
         <div class="row">
@@ -13,8 +14,8 @@
                 <div class="col-md-6">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <form action="{$conf->action_root}employeeSave" method="post" class="pure-form pure-form-aligned">
-                                <legend>Dane pracownika</legend>
+                            <form action="{$conf->action_root}customerSave" method="post" class="pure-form pure-form-aligned">
+                                <legend>Dane klienta</legend>
                                 <div class="top-margin">
                                     <label for="name">Imię</label>
                                     <input id="name" type="text" placeholder="imię" name="name" value="{$form->name}">
@@ -27,28 +28,12 @@
                                     <label for="phone_number">Nr telefonu</label>
                                     <input id="phone_number" type="text" placeholder="nr telefonu" name="phone_number" value="{$form->phone_number}">
                                 </div>
-                                <div class="top-margin">
-                                    <label for="hire_date">Data zatrudnienia</label>
-                                    <input id="hire_date" type="text" placeholder="data zatrudnienia [Y-m-d]" name="hire_date" value="{$form->hire_date}">
-                                </div>
-                                <div class="top-margin">
-                                    <label for="login">Login</label>
-                                    <input id="login" type="text" placeholder="login" name="login" value="{$form->login}">
-                                </div>
-                                <div class="top-margin">
-                                    <label for="password">Hasło</label>
-                                    <input id="password" type="text" placeholder="hasło" name="password" value="{$form->password}">
-                                </div>
-                                <div class="top-margin">
-                                    <label for="role">Rola pracownika</label>
-                                    <input id="role" type="text" placeholder="rola [admin/user]" name="role" value="{$form->role}">
-                                </div>
                                 <div class="top margin" style="display: flex">
-                                    <a class="pure-button button-secondary" style="width: 35%" href="{$conf->action_root}employeeList">Powrót</a>
+                                    <a class="pure-button button-secondary" style="width: 35%" href="{$conf->action_root}customerList">Powrót</a>
                                     &nbsp;
                                     <input type="submit" class="pure-button pure-button-primary"  style="width: 65%" value="Zapisz"/>
                                 </div>
-                                <input type="hidden" name="IDcustomer" value="{$form->IDemployee}">
+                                <input type="hidden" name="IDcustomer" value="{$form->IDcustomer}">
                             </form>	
                         </div>
                     </div>
@@ -72,5 +57,4 @@
         </div>
     </div>
 {/block}
-
 

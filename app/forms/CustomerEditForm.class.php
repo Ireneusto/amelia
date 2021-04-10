@@ -7,10 +7,4 @@ class CustomerEditForm {
     public $name;
     public $surname;
     public $phone_number;
-    public $email;
-    public $city;
-    public $postal_code;
-    public $street_name;
-    public $street_number;
-    public $house_number;
 }

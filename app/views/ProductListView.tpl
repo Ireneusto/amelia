@@ -28,6 +28,7 @@
                     <a href="{$conf->action_root}customerList" class="button">Klienci</a>
                     <a href="{$conf->action_root}employeeList" class="button">Pracownicy</a>
                     <a href="{$conf->action_root}orderList" class="button">Zamówienia</a>
+                    <a href="{$conf->action_root}logout">WYLOGUJ</a>
                 </div> 
                               
                 <div class="bottom-margin">

@@ -48,7 +48,8 @@ class EmployeeListCtrl {
                 "name",
                 "surname",
                 "phone_number",
-                "hire_date"
+                "hire_date",
+                "role"
                 ], $where);
         } catch (\PDOException $e) {
             Utils::addErrorMessage('Wystąpił błąd podczas pobierania rekordów');

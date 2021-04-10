@@ -2,7 +2,7 @@
 
 namespace app\forms;
 
-class OrderSearchForm {
+class OrderEditForm {
     public $IDorder;
     public $IDcustomer;
     public $IDemployee;
@@ -10,3 +10,4 @@ class OrderSearchForm {
     public $order_date;
     public $order_completed;
 }
+

@@ -26,6 +26,7 @@ class EmployeeEditCtrl {
         $this->form->surname = ParamUtils::getFromRequest('surname', true, 'Błędne wywołanie aplikacji');
         $this->form->phone_number = ParamUtils::getFromRequest('phone_number', true, 'Błędne wywołanie aplikacji');
         $this->form->hire_date = ParamUtils::getFromRequest('hire_date', true, 'Błędne wywołanie aplikacji');
+        $this->form->role = ParamUtils::getFromRequest('role', true, 'Błędne wywołanie aplikacji');
 
         if (App::getMessages()->isError())
             return false;
@@ -92,7 +93,6 @@ class EmployeeEditCtrl {
                 $this->form->name = $record['name'];
                 $this->form->surname = $record['surname'];
                 $this->form->phone_number = $record['phone_number'];
-                $this->form->email = $record['email'];
                 $this->form->hire_date = $record['hire_date'];         
             } catch (\PDOException $e) {
                 Utils::addErrorMessage('Wystąpił błąd podczas odczytu rekordu');
@@ -140,7 +140,8 @@ class EmployeeEditCtrl {
                         "name" => $this->form->name,
                         "surname" => $this->form->surname,
                         "phone_number" => $this->form->phone_number,
-                        "hire_date" => $this->form->hire_date,                        
+                        "hire_date" => $this->form->hire_date, 
+                        "role" => $this->form->role
                     ]);
                 } else {
                     //2.2 Edycja rekordu o danym ID
@@ -150,7 +151,8 @@ class EmployeeEditCtrl {
                         "name" => $this->form->name,
                         "surname" => $this->form->surname,
                         "phone_number" => $this->form->phone_number,
-                        "hire_date" => $this->form->hire_date
+                        "hire_date" => $this->form->hire_date,
+                        "role" => $this->form->role
                         ],[
                         "IDemployee" => $this->form->IDemployee
                     ]);

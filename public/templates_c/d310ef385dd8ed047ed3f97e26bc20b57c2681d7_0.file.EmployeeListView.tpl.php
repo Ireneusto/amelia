@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2021-04-07 14:35:04
+/* Smarty version 3.1.34-dev-7, created on 2021-04-10 13:49:43
   from 'D:\xampp\htdocs\amelia\app\views\EmployeeListView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_606da6f84c0882_54578171',
+  'unifunc' => 'content_607190d7b142e8_98094804',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'd310ef385dd8ed047ed3f97e26bc20b57c2681d7' => 
     array (
       0 => 'D:\\xampp\\htdocs\\amelia\\app\\views\\EmployeeListView.tpl',
-      1 => 1617798895,
+      1 => 1618055376,
       2 => 'file',
     ),
   ),
@@ -20,14 +20,14 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_606da6f84c0882_54578171 (Smarty_Internal_Template $_smarty_tpl) {
+function content_607190d7b142e8_98094804 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1997791484606da6f84a3ad0_22150879', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_384444595607190d7af3157_06987575', 'content');
 ?>
 
 
@@ -35,7 +35,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1997791484606da6f8
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "nowy_widok1.tpl");
 }
 /* {block 'messages'} */
-class Block_1356239677606da6f84a9dd8_75830547 extends Smarty_Internal_Block
+class Block_1717164743607190d7af8d91_88450675 extends Smarty_Internal_Block
 {
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
@@ -62,16 +62,16 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 }
 /* {/block 'messages'} */
 /* {block 'content'} */
-class Block_1997791484606da6f84a3ad0_22150879 extends Smarty_Internal_Block
+class Block_384444595607190d7af3157_06987575 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_1997791484606da6f84a3ad0_22150879',
+    0 => 'Block_384444595607190d7af3157_06987575',
   ),
   'messages' => 
   array (
-    0 => 'Block_1356239677606da6f84a9dd8_75830547',
+    0 => 'Block_1717164743607190d7af8d91_88450675',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -107,6 +107,8 @@ customerList" class="button">Klienci</a>
 employeeList" class="button">Pracownicy</a>
                     <a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
 orderList" class="button">Zamówienia</a>
+                    <a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
+logout">WYLOGUJ</a>
                 </div> 
                 
                 <div class="bottom-margin">
@@ -118,7 +120,7 @@ employeeList">lista</a>
                 
                 <div class="top-margin">
                 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1356239677606da6f84a9dd8_75830547', 'messages', $this->tplIndex);
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1717164743607190d7af8d91_88450675', 'messages', $this->tplIndex);
 ?>
 
                 </div>
@@ -133,6 +135,7 @@ $_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1356239677606da6f8
                             <th>Nazwisko</th> 
                             <th>Nr telefonu</th>
                             <th>Data zatrudnienia</th>
+                            <th>Rola w systemie</th>
                             
                            
                             <!--<th>Zamówienia</th>-->
@@ -152,6 +155,7 @@ $_smarty_tpl->tpl_vars['e']->do_else = false;
 </td><td><?php echo $_smarty_tpl->tpl_vars['e']->value["surname"];?>
 </td><td><?php echo $_smarty_tpl->tpl_vars['e']->value["phone_number"];?>
 </td><td><?php echo $_smarty_tpl->tpl_vars['e']->value["hire_date"];?>
+</td><td><?php echo $_smarty_tpl->tpl_vars['e']->value["role"];?>
 </td><td style='display:flex'><a class="button-small pure-button button-secondary" href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>
 employeeEdit/<?php echo $_smarty_tpl->tpl_vars['e']->value['IDemployee'];?>
 ">Edytuj</a>&nbsp;<a class="button-small pure-button button-warning" href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_url;?>

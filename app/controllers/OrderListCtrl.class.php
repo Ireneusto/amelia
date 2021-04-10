@@ -39,16 +39,7 @@ class OrderListCtrl {
         $where ["ORDER"] = ["order_date" => "desc"];
 
         try {
-            $this->records = App::getDB()->select("order", [
-                "[>]customer" => "IDcustomer",
-                "[>]employee" => "IDemployee",
-                "[>]product" => "IDproduct"
-                ],[
-                    "employee.IDemployee",
-                    "customer.IDcustomer",
-                    "product.IDproduct",
-                    "order.order_completed",
-                    ], $where);
+            $this->records = App::getDB()->select("order", '*' );
         } catch (\PDOException $e) {
             Utils::addErrorMessage('Wystąpił błąd podczas pobierania rekordów');
             if (App::getConf()->debug)

@@ -25,6 +25,7 @@
                     <a href="{$conf->action_root}customerList" class="button">Klienci</a>
                     <a href="{$conf->action_root}employeeList" class="button">Pracownicy</a>
                     <a href="{$conf->action_root}orderList" class="button">Zamówienia</a>
+                    <a href="{$conf->action_root}logout">WYLOGUJ</a>
                 </div> 
                 
                 <div class="bottom-margin">
@@ -58,6 +59,7 @@
                             <th>Nazwisko</th> 
                             <th>Nr telefonu</th>
                             <th>Data zatrudnienia</th>
+                            <th>Rola w systemie</th>
                             
                            
                             <!--<th>Zamówienia</th>-->
@@ -74,6 +76,7 @@
                                 <td>{$e["surname"]}</td>
                                 <td>{$e["phone_number"]}</td>
                                 <td>{$e["hire_date"]}</td>
+                                <td>{$e["role"]}</td>
                                 <td style='display:flex'>
                                     <a class="button-small pure-button button-secondary" href="{$conf->action_url}employeeEdit/{$e['IDemployee']}">Edytuj</a>
                                     &nbsp;

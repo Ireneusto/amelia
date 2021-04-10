@@ -23,12 +23,7 @@ class CustomerEditCtrl {
         $this->form->name = ParamUtils::getFromRequest('name', true, 'Błędne wywołanie aplikacji');
         $this->form->surname = ParamUtils::getFromRequest('surname', true, 'Błędne wywołanie aplikacji');
         $this->form->phone_number = ParamUtils::getFromRequest('phone_number', true, 'Błędne wywołanie aplikacji');
-        $this->form->email = ParamUtils::getFromRequest('email', true, 'Błędne wywołanie aplikacji');
-        $this->form->city = ParamUtils::getFromRequest('city', true, 'Błędne wywołanie aplikacji');
-        $this->form->postal_code = ParamUtils::getFromRequest('postal_code', true, 'Błędne wywołanie aplikacji');
-        $this->form->street_name = ParamUtils::getFromRequest('street_name', true, 'Błędne wywołanie aplikacji');
-        $this->form->street_number = ParamUtils::getFromRequest('street_number', true, 'Błędne wywołanie aplikacji');
-        $this->form->house_number = ParamUtils::getFromRequest('house_number', true, 'Błędne wywołanie aplikacji');
+        
 
         if (App::getMessages()->isError())
             return false;
@@ -42,21 +37,6 @@ class CustomerEditCtrl {
         }
         if (empty(trim($this->form->phone_number))) {
             Utils::addErrorMessage('Wprowadź numer telefonu');
-        }
-        if (empty(trim($this->form->email))) {
-            Utils::addErrorMessage('Wprowadź email');
-        }
-        if (empty(trim($this->form->city))) {
-            Utils::addErrorMessage('Wprowadź miasto');
-        }
-        if (empty(trim($this->form->postal_code))) {
-            Utils::addErrorMessage('Wprowadź kod pocztowy');
-        }
-        if (empty(trim($this->form->street_name))) {
-            Utils::addErrorMessage('Wprowadź ulicę');
-        }
-        if (empty(trim($this->form->street_number))) {
-            Utils::addErrorMessage('Wprowadź numer budynku');
         }
 
         if (App::getMessages()->isError())
@@ -93,12 +73,7 @@ class CustomerEditCtrl {
                 $this->form->name = $record['name'];
                 $this->form->surname = $record['surname'];
                 $this->form->phone_number = $record['phone_number'];
-                $this->form->email = $record['email'];
-                $this->form->city = $record['city'];
-                $this->form->postal_code = $record['postal_code'];
-                $this->form->street_name = $record['street_name'];
-                $this->form->street_number = $record['street_number'];
-                $this->form->house_number = $record['house_number'];
+                
                  
             } catch (\PDOException $e) {
                 Utils::addErrorMessage('Wystąpił błąd podczas odczytu rekordu');
@@ -144,12 +119,6 @@ class CustomerEditCtrl {
                         "name" => $this->form->name,
                         "surname" => $this->form->surname,
                         "phone_number" => $this->form->phone_number,
-                        "email" => $this->form->email,
-                        "city" => $this->form->city,
-                        "postal_code" => $this->form->postal_code,
-                        "street_name" => $this->form->street_name,
-                        "street_number" => $this->form->street_number,
-                        "house_number" => $this->form->house_number
                     ]);
                 } else {
                     //2.2 Edycja rekordu o danym ID
@@ -157,12 +126,6 @@ class CustomerEditCtrl {
                         "name" => $this->form->name,
                         "surname" => $this->form->surname,
                         "phone_number" => $this->form->phone_number,
-                        "email" => $this->form->email,
-                        "city" => $this->form->city,
-                        "postal_code" => $this->form->postal_code,
-                        "street_name" => $this->form->street_name,
-                        "street_number" => $this->form->street_number,
-                        "house_number" => $this->form->house_number
                             ], [
                         "IDcustomer" => $this->form->IDcustomer
                     ]);

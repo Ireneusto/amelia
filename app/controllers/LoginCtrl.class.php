@@ -65,7 +65,7 @@ class LoginCtrl {
     
     public function action_logout() {
         session_destroy();
-        App::getRouter()->redirectTo('start');
+        App::getRouter()->redirectTo('nowy');
     }
 
     public function generateView() {
